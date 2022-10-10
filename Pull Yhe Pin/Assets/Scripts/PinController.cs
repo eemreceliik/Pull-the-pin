@@ -27,7 +27,7 @@ public class PinController : MonoBehaviour
         var mousePosition = Input.mousePosition;
         mousePosition.z = 10;
         var currentPosition = Camera.main.ScreenToWorldPoint(mousePosition);
-        _rigidbody.velocity = new Vector3(currentPosition.x, 0, 0)*2;
+        _rigidbody.velocity = new Vector3(currentPosition.x, currentPosition.y, 0)*2;
 
     }
     private void OnMouseDown()

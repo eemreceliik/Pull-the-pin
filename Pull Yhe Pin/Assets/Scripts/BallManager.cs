@@ -6,8 +6,6 @@ using Random = System.Random;
 
 public class BallManager : MonoBehaviour
 {
-
-
     private void OnTriggerStay(Collider other)
     {
         if (other.CompareTag($"UnColoredBall"))
@@ -17,7 +15,6 @@ public class BallManager : MonoBehaviour
             other.gameObject.AddComponent<BallManager>();
         }
     }
-
     private static void ColorSelection(Component other)
     {
         var random = new Random();
@@ -25,28 +22,21 @@ public class BallManager : MonoBehaviour
 
         if (tempValue == 1) 
         {
-            other.gameObject.GetComponent<Renderer>().material.color = Color.red;
+            other.gameObject.GetComponent<Renderer>().material.color = new Color(0.99f, 0.15f, 0.1f);
         }
-
         if (tempValue == 2) 
         {
-            other.gameObject.GetComponent<Renderer>().material.color = Color.blue;
+            other.gameObject.GetComponent<Renderer>().material.color = new Color(0.24f, 0.78f, 0.99f);
         }
         if (tempValue == 3) 
         {
-            other.gameObject.GetComponent<Renderer>().material.color = Color.yellow;
+            other.gameObject.GetComponent<Renderer>().material.color = new Color(0.96f, 0.78f, 0f);
         }
         if (tempValue == 4) 
         {
-            other.gameObject.GetComponent<Renderer>().material.color = Color.green;
+            other.gameObject.GetComponent<Renderer>().material.color = new Color(0.47f, 0.87f, 0.47f);
         }
-
     }
-
-
-        
-        
-    
 }
     
     
